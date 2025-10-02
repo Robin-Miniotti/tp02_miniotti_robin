@@ -1,0 +1,38 @@
+@if(!subbitted)
+{
+
+
+
+<p>Titre de la pollution : <input [(ngModel)]="title"/></p>
+<p>
+    Type de pollution :
+    <select [(ngModel)]="pollutionType">
+        <option value="plastic">Plastique</option>
+        <option value="chimic">Chimique</option>
+        <option value="depot">Dépôt sauvage</option>
+        <option value="water">Eau</option>
+        <option value="air">Air</option>
+        <option value="other">Autre</option>
+    </select>
+</p>
+<p>Description : <textarea [(ngModel)]="description"></textarea></p>
+<p>Date de l'observation : <input type="date" [(ngModel)]="observationDate"/></p>
+<p> Lieu de l'observation : <input [(ngModel)]="location"/></p>
+<p>Longitude : <input type="text" [(ngModel)]="longitude" (keypress)="onlyDigits($event)" /></p>
+<p> Latitude : <input type="text" [(ngModel)]="latitude" (keypress)="onlyDigits($event)"/></p>
+<p> Photo : <input type="url" [(ngModel)]="photoUrl"/></p>
+<button (click)="confirm()">Confirmer</button>
+}
+@else
+{
+<app-pollution-declaration-recap
+  [title]="title"
+  [pollutionType]="pollutionType"
+  [description]="description"
+  [observationDate]="observationDate"
+  [location]="location"
+  [latitude]="latitude"
+  [longitude]="longitude"
+  [photoUrl]="photoUrl">
+</app-pollution-declaration-recap>
+}
