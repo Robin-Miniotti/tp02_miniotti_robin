@@ -21,6 +21,7 @@
 <p>Longitude : <input type="text" [(ngModel)]="longitude" (keypress)="onlyDigits($event)" /></p>
 <p> Latitude : <input type="text" [(ngModel)]="latitude" (keypress)="onlyDigits($event)"/></p>
 <p> Photo : <input type="url" [(ngModel)]="photoUrl"/></p>
+<p style="color:red">{{ errorMessage }}</p>
 <button (click)="confirm()">Confirmer</button>
 }
 @else
@@ -33,6 +34,6 @@
   [location]="location"
   [latitude]="latitude"
   [longitude]="longitude"
-  [photoUrl]="photoUrl">
+  [photoUrl]="photoUrl">  
 </app-pollution-declaration-recap>
 }

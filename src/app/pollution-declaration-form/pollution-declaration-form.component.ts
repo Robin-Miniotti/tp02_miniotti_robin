@@ -20,6 +20,7 @@ export class PollutionDeclarationFormComponent {
   photoUrl:string="";
 
   subbitted: boolean = false;
+  errorMessage: string = "";
 
   onlyDigits(event: KeyboardEvent) {
     if (!/[0-9]/.test(event.key)) {
@@ -40,9 +41,10 @@ export class PollutionDeclarationFormComponent {
     if(this.title && this.pollutionType && this.description && this.location && this.latitude && this.longitude){   
       alert("Déclaration soumise avec succès !");
       this.subbitted = true;
+      this.errorMessage = "";
     }
     else{
-      alert("Veuillez remplir tous les champs obligatoires.");
+      this.errorMessage = "Veuillez remplir tous les champs obligatoires.";
     }    
   }
 }

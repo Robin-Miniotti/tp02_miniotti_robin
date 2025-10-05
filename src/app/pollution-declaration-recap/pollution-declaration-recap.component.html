@@ -1,9 +1,12 @@
-<h3>Récapitulatif</h3>
-<p><strong>Titre :</strong> {{ title }}</p>
-<p><strong>Type de pollution :</strong> {{ pollutionType }}</p>
-<p><strong>Description :</strong> {{ description }}</p>
-<p><strong>Date :</strong> {{ observationDate}}</p>
-<p><strong>Lieu :</strong> {{ location }}</p>
-<p><strong>Latitude :</strong> {{ latitude }}</p>
-<p><strong>Longitude :</strong> {{ longitude }}</p>
-<p><strong>Photo :</strong> <img [src]="photoUrl" alt="Photo" width="200" *ngIf="photoUrl"></p>
+<div>
+    <h3 class="recap-title">Récapitulatif</h3>
+    <p class="recap-item"><strong>Titre :</strong> {{ title }}</p>
+    <p class="recap-item"><strong>Type de pollution :</strong> {{ pollutionType }}</p>
+    <p class="recap-item"><strong>Description :</strong> {{ description }}</p>
+    <p class="recap-item"><strong>Date :</strong> {{ observationDate}}</p>
+    <p class="recap-item"><strong>Lieu :</strong> {{ location }}</p>
+    <p class="recap-item"><strong>Latitude :</strong> {{ latitude }}</p>
+    <p class="recap-item"><strong>Longitude :</strong> {{ longitude }}</p>
+    <p class="recap-item"><strong>Photo :</strong></p>
+    <img class="recap-photo" src='{{ photoUrl }}' alt="Photo">
+</div>
