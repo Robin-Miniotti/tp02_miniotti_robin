@@ -1,6 +1,0 @@
-{
-  "root": "dist/tp2",
-  "routes": {
-    "/**": "index.html"
-  }
-}
