@@ -1,8 +1,6 @@
 @if(!subbitted)
 {
-
-
-
+  <div>
 <p>Titre de la pollution : <input [(ngModel)]="title"/></p>
 <p>
     Type de pollution :
@@ -23,6 +21,7 @@
 <p> Photo : <input type="url" [(ngModel)]="photoUrl"/></p>
 <p style="color:red">{{ errorMessage }}</p>
 <button (click)="confirm()">Confirmer</button>
+</div>
 }
 @else
 {
